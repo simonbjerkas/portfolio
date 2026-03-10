@@ -67,7 +67,7 @@ export function Hero() {
         }}
       >
         <img
-          src="/portrait.jpg"
+          src="/portrait.webp"
           alt=""
           aria-hidden="true"
           fetchPriority="high"
