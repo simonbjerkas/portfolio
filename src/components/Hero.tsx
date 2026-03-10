@@ -1,50 +1,51 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
 const ROLES = [
-  'software engineer.',
-  'problem solver.',
-  'open source enthusiast.',
-  'builder of things.',
-]
+  "software engineer.",
+  "problem solver.",
+  "movie lover.",
+  "builder of things.",
+  "passionate learner.",
+];
 
 export function Hero() {
-  const [roleIndex, setRoleIndex] = useState(0)
-  const [displayed, setDisplayed] = useState('')
-  const [deleting, setDeleting] = useState(false)
-  const [paused, setPaused] = useState(false)
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [displayed, setDisplayed] = useState("");
+  const [deleting, setDeleting] = useState(false);
+  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
-    const current = ROLES[roleIndex]
+    const current = ROLES[roleIndex];
 
     if (paused) {
       const t = setTimeout(() => {
-        setDeleting(true)
-        setPaused(false)
-      }, 2000)
-      return () => clearTimeout(t)
+        setDeleting(true);
+        setPaused(false);
+      }, 2000);
+      return () => clearTimeout(t);
     }
 
     if (!deleting) {
       if (displayed.length < current.length) {
         const t = setTimeout(() => {
-          setDisplayed(current.slice(0, displayed.length + 1))
-        }, 60)
-        return () => clearTimeout(t)
+          setDisplayed(current.slice(0, displayed.length + 1));
+        }, 60);
+        return () => clearTimeout(t);
       } else {
-        setPaused(true)
+        setPaused(true);
       }
     } else {
       if (displayed.length > 0) {
         const t = setTimeout(() => {
-          setDisplayed(displayed.slice(0, -1))
-        }, 30)
-        return () => clearTimeout(t)
+          setDisplayed(displayed.slice(0, -1));
+        }, 30);
+        return () => clearTimeout(t);
       } else {
-        setDeleting(false)
-        setRoleIndex((i) => (i + 1) % ROLES.length)
+        setDeleting(false);
+        setRoleIndex((i) => (i + 1) % ROLES.length);
       }
     }
-  }, [displayed, deleting, paused, roleIndex])
+  }, [displayed, deleting, paused, roleIndex]);
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center px-6 overflow-hidden">
@@ -52,13 +53,13 @@ export function Hero() {
       <div
         className="absolute pointer-events-none"
         style={{
-          top: '20%',
-          left: '-10%',
-          width: '600px',
-          height: '600px',
+          top: "20%",
+          left: "-10%",
+          width: "600px",
+          height: "600px",
           background:
-            'radial-gradient(circle, oklch(0.72 0.18 45 / 6%) 0%, transparent 70%)',
-          filter: 'blur(40px)',
+            "radial-gradient(circle, color-mix(in srgb, #B7FE50 8%, transparent) 0%, transparent 70%)",
+          filter: "blur(40px)",
         }}
       />
       <div className="mx-auto max-w-5xl w-full relative">
@@ -77,7 +78,7 @@ export function Hero() {
         {/* Typewriter role */}
         <div className="mt-8 animate-fade-up-delay-2 h-8 flex items-center">
           <span className="text-lg sm:text-xl text-muted-foreground font-light">
-            I'm a{' '}
+            I'm a{" "}
             <span className="text-foreground font-medium">{displayed}</span>
             <span className="cursor-blink text-primary ml-0.5">|</span>
           </span>
@@ -98,5 +99,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }

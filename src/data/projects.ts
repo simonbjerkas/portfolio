@@ -1,63 +1,70 @@
 export interface Project {
-  id: string
-  title: string
-  description: string
-  tags: string[]
-  url?: string
-  year: string
-  featured?: boolean
+  id: string;
+  title: string;
+  description: string;
+  tags: string[];
+  github?: string;
+  url?: string;
+  year: string;
+  featured?: boolean;
 }
 
 export const projects: Project[] = [
   {
-    id: 'personal-site',
-    title: 'Personal Website',
+    id: "personal-site",
+    title: "Personal Website",
     description:
-      'This very site — built with Vite, React, TypeScript, and shadcn/ui. Designed with a dark editorial aesthetic.',
-    tags: ['React', 'TypeScript', 'Tailwind'],
-    year: '2026',
+      "This very site — built with Vite, React, TypeScript, and shadcn/ui. Designed with a dark editorial aesthetic.",
+    tags: ["React", "TypeScript", "Tailwind"],
+    url: "https://simonbjerkas.com",
+    year: "2026",
     featured: true,
   },
   {
-    id: 'project-two',
-    title: 'Project Two',
+    id: "cinemate",
+    title: "Cinemate",
     description:
-      'A full-stack application with a focus on real-time collaboration and seamless UX. Built with modern tooling.',
-    tags: ['Node.js', 'React', 'WebSockets'],
-    year: '2025',
+      "A platform for film enthusiasts to discover, track, and share their movie experiences. Built with a focus on clean UX and a love for cinema.",
+    tags: ["React", "TypeScript", "Film"],
+    github: "https://github.com/simonbjerkas/cinemate",
+    url: "https://www.cinemate.film",
+    year: "2025",
     featured: true,
   },
   {
-    id: 'project-three',
-    title: 'Project Three',
+    id: "mini-shell",
+    title: "Mini Shell",
     description:
-      'An open-source CLI tool that automates repetitive developer workflows and integrates with popular services.',
-    tags: ['TypeScript', 'CLI', 'Open Source'],
-    year: '2025',
+      "A minimal Unix shell written in Rust. Supports core shell features while keeping the codebase small and readable.",
+    tags: ["Rust", "CLI", "Systems"],
+    github: "https://github.com/simonbjerkas/shell-rust",
+    year: "2025",
     featured: true,
   },
   {
-    id: 'project-four',
-    title: 'Project Four',
+    id: "mini-git",
+    title: "Mini Git",
     description:
-      'A data visualization dashboard that turns complex datasets into readable, interactive charts.',
-    tags: ['D3.js', 'React', 'REST API'],
-    year: '2024',
+      "A minimal rewrite of Git in Rust. Implements core version control primitives as a learning exercise in systems programming.",
+    tags: ["Rust", "Git", "Systems"],
+    github: "https://github.com/simonbjerkas/git-rust",
+    year: "2026",
   },
   {
-    id: 'project-five',
-    title: 'Project Five',
+    id: "bachelors-project",
+    title: "Bachelor's Project",
     description:
-      'A mobile-first e-commerce experience with cart management, Stripe payments, and a custom CMS backend.',
-    tags: ['Next.js', 'Stripe', 'PostgreSQL'],
-    year: '2024',
+      "My bachelor's degree capstone project, developed in collaboration with an external partner. Details are confidential under NDA.",
+    tags: ["NDA", "Academic"],
+    year: "2025",
   },
   {
-    id: 'project-six',
-    title: 'Project Six',
+    id: "http-server",
+    title: "HTTP Server",
     description:
-      'A browser extension that enhances developer productivity with custom shortcuts and workflow automation.',
-    tags: ['JavaScript', 'Browser Extension', 'UX'],
-    year: '2023',
+      "A minimal HTTP server written from scratch in Rust. Handles core HTTP/1.1 request parsing, routing, and response handling.",
+    tags: ["Rust", "HTTP", "Networking"],
+    github: "https://github.com/simonbjerkas/http-server-rust",
+    year: "2026",
   },
-]
+];

@@ -1,4 +1,4 @@
-import { Separator } from '@/components/ui/separator'
+import { Separator } from "@/components/ui/separator";
 
 export function AboutSection() {
   return (
@@ -13,7 +13,7 @@ export function AboutSection() {
           {/* Statement */}
           <div>
             <h2 className="text-3xl sm:text-4xl font-semibold leading-snug tracking-tight">
-              Crafting software that feels{' '}
+              Crafting software that feels{" "}
               <span className="text-primary">intentional</span>.
             </h2>
           </div>
@@ -26,19 +26,21 @@ export function AboutSection() {
               the craft — both the code and the experience it creates.
             </p>
             <p>
-              When I'm not shipping features, I'm exploring new tools,
-              contributing to open source, or obsessing over typography and
-              design systems.
+              I'm not tied to any one stack — while I have experience with tools
+              like TypeScript and React, I also enjoy exploring other languages
+              and ecosystems, especially Rust. Outside of software, I have a big
+              passion for movies and cinema, which strongly shapes how I think
+              about creativity, storytelling, and craft.
             </p>
 
             <Separator className="my-6 opacity-30" />
 
             <div className="grid grid-cols-2 gap-4 text-sm">
               {[
-                ['Stack', 'TypeScript, React, Node'],
-                ['Focus', 'Web & Product Engineering'],
-                ['Location', 'Norway'],
-                ['Status', 'Open to opportunities'],
+                ["Stack", "TypeScript, React, Rust"],
+                ["Focus", "Software Engineering & Craft"],
+                ["Location", "Norway"],
+                ["Interests", "Cinema, Storytelling, Technology"],
               ].map(([label, value]) => (
                 <div key={label}>
                   <p className="text-xs tracking-widest uppercase text-muted-foreground/60 mb-1">
@@ -52,5 +54,5 @@ export function AboutSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,8 +1,7 @@
 const LINKS = [
-  { label: 'GitHub', href: 'https://github.com/simonbjerkas' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/simonbjerkas' },
-  { label: 'Email', href: 'mailto:hello@simonbjerkas.dev' },
-]
+  { label: "GitHub", href: "https://github.com/simonbjerkas" },
+  { label: "Email", href: "mailto:simon.bjerkas10@gmail.com" },
+];
 
 export function ConnectSection() {
   return (
@@ -14,8 +13,8 @@ export function ConnectSection() {
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-snug">
-            Let's build something{' '}
-            <span className="text-primary">together</span>.
+            Let's build something <span className="text-primary">together</span>
+            .
           </h2>
 
           <div className="space-y-1">
@@ -23,7 +22,7 @@ export function ConnectSection() {
               <a
                 key={label}
                 href={href}
-                target={href.startsWith('mailto') ? undefined : '_blank'}
+                target={href.startsWith("mailto") ? undefined : "_blank"}
                 rel="noreferrer"
                 className="group flex items-center justify-between py-4 border-b border-border hover:border-primary/40 transition-colors"
               >
@@ -39,5 +38,5 @@ export function ConnectSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
