@@ -70,6 +70,8 @@ export function Hero() {
           src="/portrait.jpg"
           alt=""
           aria-hidden="true"
+          fetchPriority="high"
+          decoding="sync"
           className="w-full h-full object-cover object-top opacity-[0.18]"
           style={{ filter: "grayscale(100%) contrast(1.1)" }}
         />
