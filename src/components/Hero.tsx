@@ -49,6 +49,32 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center px-6 overflow-hidden">
+      {/* Portrait — replace src with your photo: /portrait.jpg */}
+      <div
+        className="absolute inset-y-0 right-0 pointer-events-none"
+        style={{
+          width: "55%",
+          maskImage: [
+            "linear-gradient(to right, transparent 0%, black 35%)",
+            "linear-gradient(to bottom, transparent 0%, black 12%, black 80%, transparent 100%)",
+          ].join(", "),
+          maskComposite: "intersect",
+          WebkitMaskImage: [
+            "linear-gradient(to right, transparent 0%, black 35%)",
+            "linear-gradient(to bottom, transparent 0%, black 12%, black 80%, transparent 100%)",
+          ].join(", "),
+          WebkitMaskComposite: "source-in",
+        }}
+      >
+        <img
+          src="/portrait-placeholder.svg"
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover object-top opacity-[0.18]"
+          style={{ filter: "grayscale(100%) contrast(1.1)" }}
+        />
+      </div>
+
       {/* Radial glow */}
       <div
         className="absolute pointer-events-none"
