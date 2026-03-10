@@ -16,6 +16,7 @@ export const projects: Project[] = [
     description:
       "This very site — built with Vite, React, TypeScript, and shadcn/ui. Designed with a dark editorial aesthetic.",
     tags: ["React", "TypeScript", "Tailwind"],
+    github: "https://github.com/simonbjerkas/portfolio",
     url: "https://simonbjerkas.com",
     year: "2026",
     featured: true,

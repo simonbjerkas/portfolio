@@ -72,7 +72,7 @@ export function Hero() {
         <h1 className="text-7xl sm:text-8xl md:text-9xl font-bold tracking-tight leading-none mb-6 animate-fade-up-delay-1">
           Simon
           <br />
-          <span className="text-foreground/20">Bjerkås</span>
+          <span className="text-foreground/35">Bjerkås</span>
         </h1>
 
         {/* Typewriter role */}
