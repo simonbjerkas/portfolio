@@ -51,7 +51,7 @@ export function Hero() {
     <section className="relative min-h-screen flex flex-col justify-center px-6 overflow-hidden">
       {/* Portrait — replace src with your photo: /portrait.jpg */}
       <div
-        className="absolute inset-y-0 right-0 pointer-events-none"
+        className="hidden md:block absolute inset-y-0 right-0 pointer-events-none"
         style={{
           width: "55%",
           maskImage: [
@@ -67,7 +67,7 @@ export function Hero() {
         }}
       >
         <img
-          src="/portrait-placeholder.svg"
+          src="/portrait.jpg"
           alt=""
           aria-hidden="true"
           className="w-full h-full object-cover object-top opacity-[0.18]"
