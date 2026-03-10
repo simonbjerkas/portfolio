@@ -5,8 +5,8 @@ export function Nav() {
   const { pathname } = useLocation()
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
-      <div className="mx-auto max-w-5xl px-6 py-5 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 backdrop-blur-sm bg-background/70">
+      <div className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
         <Link
           to="/"
           className="text-sm font-medium tracking-widest uppercase text-foreground/60 hover:text-foreground transition-colors"

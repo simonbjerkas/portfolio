@@ -47,8 +47,21 @@ export function Hero() {
   }, [displayed, deleting, paused, roleIndex])
 
   return (
-    <section className="min-h-screen flex flex-col justify-center px-6">
-      <div className="mx-auto max-w-5xl w-full">
+    <section className="relative min-h-screen flex flex-col justify-center px-6 overflow-hidden">
+      {/* Radial glow */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          top: '20%',
+          left: '-10%',
+          width: '600px',
+          height: '600px',
+          background:
+            'radial-gradient(circle, oklch(0.72 0.18 45 / 6%) 0%, transparent 70%)',
+          filter: 'blur(40px)',
+        }}
+      />
+      <div className="mx-auto max-w-5xl w-full relative">
         {/* Section marker */}
         <p className="text-xs tracking-[0.25em] uppercase text-primary mb-8 animate-fade-up font-medium">
           00 — Hello
