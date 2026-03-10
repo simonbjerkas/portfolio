@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# simonbjerkas.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal website and portfolio — built with Vite, React, and shadcn/ui.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **[Vite](https://vite.dev/)** — build tool and dev server
+- **[React 19](https://react.dev/)** + **TypeScript**
+- **[Tailwind CSS v4](https://tailwindcss.com/)**
+- **[shadcn/ui](https://ui.shadcn.com/)** — component primitives
+- **[React Router v7](https://reactrouter.com/)** — client-side routing
+- **[Geist](https://vercel.com/font)** — typeface (self-hosted)
 
-## React Compiler
+## Pages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Route | Description |
+|---|---|
+| `/` | Hero, about, featured projects, contact |
+| `/projects` | Full project list |
 
-## Expanding the ESLint configuration
+## Getting started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Commands
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build      # production build
+npm run preview    # preview production build locally
+npm run lint       # lint
 ```
+
+> Run Lighthouse against `npm run preview` (`localhost:4173`), not the dev server — Vite serves unbundled modules in dev which skews performance scores significantly.
+
+## Updating content
+
+| What | Where |
+|---|---|
+| Projects | `src/data/projects.ts` |
+| About text / stack | `src/components/AboutSection.tsx` |
+| Social / contact links | `src/components/ConnectSection.tsx` |
+| Hero roles (typewriter) | `src/components/Hero.tsx` |
+| Portrait photo | Replace `public/portrait.webp` |
+
+## Deployment
+
+Deployed on [Vercel](https://vercel.com/). Push to `main` to trigger a deploy.
+
+> If you add new routes, update `public/sitemap.xml` manually.
