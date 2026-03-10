@@ -1,0 +1,89 @@
+import { useEffect, useState } from 'react'
+
+const ROLES = [
+  'software engineer.',
+  'problem solver.',
+  'open source enthusiast.',
+  'builder of things.',
+]
+
+export function Hero() {
+  const [roleIndex, setRoleIndex] = useState(0)
+  const [displayed, setDisplayed] = useState('')
+  const [deleting, setDeleting] = useState(false)
+  const [paused, setPaused] = useState(false)
+
+  useEffect(() => {
+    const current = ROLES[roleIndex]
+
+    if (paused) {
+      const t = setTimeout(() => {
+        setDeleting(true)
+        setPaused(false)
+      }, 2000)
+      return () => clearTimeout(t)
+    }
+
+    if (!deleting) {
+      if (displayed.length < current.length) {
+        const t = setTimeout(() => {
+          setDisplayed(current.slice(0, displayed.length + 1))
+        }, 60)
+        return () => clearTimeout(t)
+      } else {
+        setPaused(true)
+      }
+    } else {
+      if (displayed.length > 0) {
+        const t = setTimeout(() => {
+          setDisplayed(displayed.slice(0, -1))
+        }, 30)
+        return () => clearTimeout(t)
+      } else {
+        setDeleting(false)
+        setRoleIndex((i) => (i + 1) % ROLES.length)
+      }
+    }
+  }, [displayed, deleting, paused, roleIndex])
+
+  return (
+    <section className="min-h-screen flex flex-col justify-center px-6">
+      <div className="mx-auto max-w-5xl w-full">
+        {/* Section marker */}
+        <p className="text-xs tracking-[0.25em] uppercase text-primary mb-8 animate-fade-up font-medium">
+          00 — Hello
+        </p>
+
+        {/* Name */}
+        <h1 className="text-7xl sm:text-8xl md:text-9xl font-bold tracking-tight leading-none mb-6 animate-fade-up-delay-1">
+          Simon
+          <br />
+          <span className="text-foreground/20">Bjerkås</span>
+        </h1>
+
+        {/* Typewriter role */}
+        <div className="mt-8 animate-fade-up-delay-2 h-8 flex items-center">
+          <span className="text-lg sm:text-xl text-muted-foreground font-light">
+            I'm a{' '}
+            <span className="text-foreground font-medium">{displayed}</span>
+            <span className="cursor-blink text-primary ml-0.5">|</span>
+          </span>
+        </div>
+
+        {/* Tagline */}
+        <p className="mt-6 max-w-lg text-muted-foreground text-base leading-relaxed animate-fade-up-delay-3">
+          I build thoughtful digital products — with a focus on clean code,
+          great UX, and lasting quality.
+        </p>
+
+        {/* Scroll cue */}
+        <div className="mt-16 flex items-center gap-3 animate-fade-up-delay-3">
+          <div className="w-8 h-px bg-primary" />
+          <span className="text-xs tracking-widest uppercase text-muted-foreground">
+            Scroll to explore
+          </span>
+        </div>
+      </div>
+    </section>
+  )
+}
