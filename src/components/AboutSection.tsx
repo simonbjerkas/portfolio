@@ -21,14 +21,16 @@ export function AboutSection() {
           {/* Details */}
           <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p>
-              I'm a software engineer based in Norway with a passion for
-              building clean, performant web applications. I care deeply about
-              the craft — both the code and the experience it creates.
+              I’m a software engineer based in Norway and relocating to
+              Amsterdam, with a passion for building clean, performant web
+              applications. I care deeply about the craft — both the code and
+              the experience it creates.
             </p>
             <p>
-              I'm not tied to any one stack — while I have experience with tools
-              like TypeScript and React, I also enjoy exploring other languages
-              and ecosystems, especially Rust. Outside of software, I have a big
+              I enjoy working across the stack and choosing tools based on the
+              problem at hand. While I have experience with tools like
+              TypeScript and React, I also enjoy exploring other languages and
+              ecosystems, especially Rust. Outside of software, I have a big
               passion for movies and cinema, which strongly shapes how I think
               about creativity, storytelling, and craft.
             </p>
@@ -38,8 +40,8 @@ export function AboutSection() {
             <div className="grid grid-cols-2 gap-4 text-sm">
               {[
                 ["Stack", "TypeScript, React, Rust"],
-                ["Focus", "Software Engineering & Craft"],
-                ["Location", "Norway"],
+                ["Focus", "Software Engineering & Software Craft"],
+                ["Location", "Norway -> Netherlands"],
                 ["Interests", "Cinema, Storytelling, Technology"],
               ].map(([label, value]) => (
                 <div key={label}>

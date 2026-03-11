@@ -4,7 +4,7 @@ const ROLES = [
   "software engineer.",
   "problem solver.",
   "movie lover.",
-  "builder of things.",
+  "builder.",
   "passionate learner.",
 ];
 
@@ -115,7 +115,7 @@ export function Hero() {
         {/* Tagline */}
         <p className="mt-6 max-w-lg text-muted-foreground text-base leading-relaxed animate-fade-up-delay-3">
           I build thoughtful digital products — with a focus on clean code,
-          great UX, and lasting quality.
+          intuitive UX, and lasting quality.
         </p>
 
         {/* Scroll cue */}

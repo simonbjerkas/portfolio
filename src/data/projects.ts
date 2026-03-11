@@ -14,7 +14,7 @@ export const projects: Project[] = [
     id: "personal-site",
     title: "Personal Website",
     description:
-      "This very site — built with Vite, React, TypeScript, and shadcn/ui. Designed with a dark editorial aesthetic.",
+      "This very site — built with Vite, React, TypeScript, and shadcn/ui. Designed to feel minimal, cinematic, and editorial.",
     tags: ["React", "TypeScript", "Tailwind"],
     github: "https://github.com/simonbjerkas/portfolio",
     url: "https://simonbjerkas.com",
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     id: "mini-shell",
     title: "Mini Shell",
     description:
-      "A minimal Unix shell written in Rust. Supports core shell features while keeping the codebase small and readable.",
+      "A small Unix shell written in Rust to explore process handling, command parsing, and core shell behavior.",
     tags: ["Rust", "CLI", "Systems"],
     github: "https://github.com/simonbjerkas/shell-rust",
     year: "2025",

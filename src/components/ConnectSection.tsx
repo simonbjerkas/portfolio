@@ -13,8 +13,8 @@ export function ConnectSection() {
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-snug">
-            Let's build something <span className="text-primary">together</span>
-            .
+            Interested in working together?{" "}
+            <span className="text-primary">Let’s connect</span>.
           </h2>
 
           <div className="space-y-1">
