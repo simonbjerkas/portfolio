@@ -32,7 +32,7 @@ export function Hero() {
         }, 60);
         return () => clearTimeout(t);
       } else {
-        setPaused(true);
+        setTimeout(() => setPaused(true), 0);
       }
     } else {
       if (displayed.length > 0) {
@@ -41,8 +41,10 @@ export function Hero() {
         }, 30);
         return () => clearTimeout(t);
       } else {
-        setDeleting(false);
-        setRoleIndex((i) => (i + 1) % ROLES.length);
+        setTimeout(() => {
+          setDeleting(false);
+          setRoleIndex((i) => (i + 1) % ROLES.length);
+        }, 0);
       }
     }
   }, [displayed, deleting, paused, roleIndex]);
