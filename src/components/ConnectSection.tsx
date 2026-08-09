@@ -1,6 +1,6 @@
 const LINKS = [
   { label: "GitHub", href: "https://github.com/simonbjerkas" },
-  { label: "Email", href: "mailto:simon.bjerkas10@gmail.com" },
+  { label: "Email", href: "mailto:hello@simonbjerkas.com" },
 ];
 
 export function ConnectSection() {
@@ -8,13 +8,13 @@ export function ConnectSection() {
     <section className="px-6 py-24">
       <div className="mx-auto max-w-5xl">
         <p className="text-xs tracking-[0.25em] uppercase text-primary mb-8 font-medium">
-          03 — Connect
+          03 / Connect
         </p>
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-snug">
-            Interested in working together?{" "}
-            <span className="text-primary">Let’s connect</span>.
+            Want to build something together?{" "}
+            <span className="text-primary">Say hi</span>.
           </h2>
 
           <div className="space-y-1">

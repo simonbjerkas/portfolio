@@ -5,7 +5,8 @@ const ROLES = [
   "problem solver.",
   "movie lover.",
   "builder.",
-  "passionate learner.",
+  "still learning.",
+  "perpetually curious.",
 ];
 
 export function Hero() {
@@ -95,7 +96,7 @@ export function Hero() {
       <div className="mx-auto max-w-5xl w-full relative">
         {/* Section marker */}
         <p className="text-xs tracking-[0.25em] uppercase text-primary mb-8 animate-fade-up font-medium">
-          00 — Hello
+          00 / Hello
         </p>
 
         {/* Name */}
@@ -116,8 +117,8 @@ export function Hero() {
 
         {/* Tagline */}
         <p className="mt-6 max-w-lg text-muted-foreground text-base leading-relaxed animate-fade-up-delay-3">
-          I build thoughtful digital products — with a focus on clean code,
-          intuitive UX, and lasting quality.
+          I build software that runs fast, feels obvious to use, and still
+          makes sense a year later.
         </p>
 
         {/* Scroll cue */}

@@ -13,8 +13,8 @@ export function Projects() {
           Projects
         </h1>
         <p className="text-muted-foreground text-lg mb-16 max-w-md">
-          A collection of things I've built — side projects, tools, and
-          experiments.
+          Side projects, tools, and a few things I built purely to find out how
+          they work.
         </p>
 
         {/* Featured grid */}
